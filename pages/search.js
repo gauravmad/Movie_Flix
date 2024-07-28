@@ -2,9 +2,11 @@ import React from "react";
 import MovieCard from "@/components/MovieCard";
 
 const Search = ({ movies }) => {
+  
   const searchMovies = movies.slice(0, 6);
+
   return (
-    <div className="h-[83vh] w-[90%] mx-auto p-[2vh]">
+    <div className="md:h-[83vh] w-[90%] mx-auto p-[2vh]">
       <h1 className="text-[4.5vh] my-[4vh] text-center font-semibold">
         Search Results
       </h1>

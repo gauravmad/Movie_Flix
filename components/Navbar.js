@@ -35,14 +35,12 @@ const Navbar = () => {
   return (
     <div className="shadow-md bg-[#fff]">
       {/* <BackdropLoader open={loading} />   */}
-      <div className="py-[1vh] w-[90%] mx-auto flex flex-row justify-between items-center">
+      <div className="py-[2vh] lg:py-[1vh] w-[90%] mx-auto flex flex-row justify-between items-center">
         
         <Link href="/">
-          <Image
-            width={150}
-            height={50}
+          <img
             src="/logo.jpg"
-            className="cursor-pointer"
+            className="cursor-pointer w-[12vh] lg:w-[20vh]"
           />
         </Link>
 
@@ -52,17 +50,17 @@ const Navbar = () => {
             placeholder="Search Movies, series, animes here.."
             value={searchTerm}
             onChange={(e)=>setSearchTerm(e.target.value)}
-            className="px-[2vh] py-[1vh] focus:outline-none  w-[30vw] text-[2.3vh]"
+            className="px-[1vh] lg:px-[2vh] py-[0.6vh] lg:py-[1vh] focus:outline-none w-[45vw] lg:w-[30vw] text-[1.8vh] lg:text-[2.3vh]"
           />
           <button 
             onClick={handleSearch}
-            className="bg-[#f5c518] px-[2vh] py-[1vh] text-[2.3vh]"
+            className="bg-[#f5c518] px-[1vh] lg:px-[2vh] py-[0.6vh] lg:py-[1vh]"
           >
-            <Image src="/search.png" width={20} height={20} />
+            <Image src="/search.png" width={15} height={15} />
           </button>
         </div>
 
-        <button className="bg-[#f5c518] px-[2vh] py-[1vh] hover:scale-110 duration-300 transition-all font-semibold text-[2.3vh]">
+        <button className="contact bg-[#f5c518] px-[2vh] py-[1vh] hover:scale-110 duration-300 transition-all font-semibold text-[2.3vh]">
           Contact Us
         </button>
 

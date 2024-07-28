@@ -6,13 +6,13 @@ export default function Home({movies}) {
 
   const topMovies = movies.slice(0,6);
   return (
-    <div className="h-[83vh] w-[90%] mx-auto p-[2vh]">
+    <div className="md:h-[83vh] w-[95%] lg:w-[90%] mx-auto p-[2vh]">
 
-      <h1 className="text-[4.5vh] my-[4vh] text-center font-semibold">
+      <h1 className="text-[3vh] lg:text-[4.5vh] my-[2vh] lg:my-[4vh] text-center font-semibold">
         Top Picks for you!!
       </h1>
 
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row gap-y-[2vh] flex-wrap justify-between">
         {topMovies.map((movie)=>(
           <MovieCard movie={movie} key={movie.imdbID}/>
         ))}

@@ -7,7 +7,8 @@
 body{
   font-family: 'Montserrat', sans-serif;
   background-color: #fff;
-  overflow-y: hidden;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
 }
 
 ::-webkit-scrollbar {
@@ -24,4 +25,10 @@ body{
 
 ::-webkit-scrollbar-thumb:hover {
   background: #f5c518;
+}
+
+@media (max-width: 768px) {
+  .contact{
+    display: none;  
+  }
 }
