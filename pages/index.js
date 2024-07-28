@@ -31,7 +31,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      movies: data.Search,
+      movies: data.Search || [],
     },
   };
 

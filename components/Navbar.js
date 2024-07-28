@@ -24,10 +24,19 @@ const Navbar = () => {
     };
   }, []);
 
+  const [searchTerm, setSearchTerm] = useState(""); 
+
+  const handleSearch =()=>{
+    if(searchTerm.trim()){
+      router.push(`/search?query=${encodeURIComponent(searchTerm)}`);
+    }
+  }
+
   return (
     <div className="shadow-md bg-[#fff]">
       {/* <BackdropLoader open={loading} />   */}
       <div className="py-[1vh] w-[90%] mx-auto flex flex-row justify-between items-center">
+        
         <Link href="/">
           <Image
             width={150}
@@ -41,9 +50,14 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search Movies, series, animes here.."
+            value={searchTerm}
+            onChange={(e)=>setSearchTerm(e.target.value)}
             className="px-[2vh] py-[1vh] focus:outline-none  w-[30vw] text-[2.3vh]"
           />
-          <button className="bg-[#f5c518] px-[2vh] py-[1vh] text-[2.3vh]">
+          <button 
+            onClick={handleSearch}
+            className="bg-[#f5c518] px-[2vh] py-[1vh] text-[2.3vh]"
+          >
             <Image src="/search.png" width={20} height={20} />
           </button>
         </div>
@@ -51,6 +65,7 @@ const Navbar = () => {
         <button className="bg-[#f5c518] px-[2vh] py-[1vh] hover:scale-110 duration-300 transition-all font-semibold text-[2.3vh]">
           Contact Us
         </button>
+
       </div>
     </div>
   );
